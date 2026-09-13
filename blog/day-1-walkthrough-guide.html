@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fil" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabay sa Day 1: Buong Walkthrough mula kay Junjun Hanggang sa Hatinggabi — Narinig Mo Ba?</title>
+    <meta name="description"
+        content="Kumpletong walkthrough sa Day 1 ng Narinig Mo Ba?. Paano i-serve ang stick ng kape kay Junjun, tamang pag-check ng presyo sa counter, pag-sukli, at pag-survive sa hatinggabi.">
+    <meta name="keywords"
+        content="narinig mo ba day 1 walkthrough, narinig mo ba junjun, paano laruin ang narinig mo ba, narinig mo ba kape, narinig mo ba tips, narinig mo ba guide">
+
+    <link rel="canonical" href="https://narinigmoba.github.io/blog/day-1-walkthrough-guide">
+    <link rel="alternate" hreflang="fil-PH" href="https://narinigmoba.github.io/blog/day-1-walkthrough-guide">
+    <link rel="alternate" hreflang="tl" href="https://narinigmoba.github.io/blog/day-1-walkthrough-guide">
+    <link rel="alternate" hreflang="en" href="https://narinigmoba.github.io/en/blog/day-1-walkthrough-guide">
+    <link rel="alternate" hreflang="x-default" href="https://narinigmoba.github.io/blog/day-1-walkthrough-guide">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Gabay sa Day 1: Buong Walkthrough sa Narinig Mo Ba?">
+    <meta property="og:description"
+        content="Alamin kung paano asikasuhin ang unang mamimili na si Junjun, tamang paggamit ng counter at estante, at paano makaligtas sa unang shift.">
+    <meta property="og:url" content="https://narinigmoba.github.io/blog/day-1-walkthrough-guide">
+    <meta property="og:image" content="https://narinigmoba.github.io/images/junjun-1200.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Narinig Mo Ba? Day 1 Walkthrough Guide">
+    <meta name="twitter:description"
+        content="Detalyadong tutorial sa unang shift sa sari-sari store horror game.">
+    <meta name="twitter:image" content="https://narinigmoba.github.io/images/junjun-1200.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="90x90" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blood: '#8A1414',
+                        ink: '#0D0A0D',
+                        panel: '#161116',
+                        mute: '#8E7F87',
+                        cream: '#F4EAE0',
+                        amber: '#E0A96D',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background-color: #8A1414; color: #FFFFFF; }
+    </style>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H9E3KTYL3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4H9E3KTYL3');
+    </script>
+</head>
+
+<body class="bg-ink text-cream font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- ============ HEADER ============ -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-ink/85 border-b border-white/10">
+        <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 font-extrabold text-lg tracking-tight">
+                <img src="/images/logo.png" alt="Narinig Mo Ba? Logo" class="w-8 h-8 rounded-md object-contain">
+                <span class="text-white">Narinig Mo Ba?</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm text-cream/80">
+                <a href="/#play" class="hover:text-blood transition font-medium">Maglaro sa Browser</a>
+                <a href="/blog/" class="text-amber font-semibold">Mga Gabay</a>
+                <a href="/#about" class="hover:text-blood transition font-medium">Tungkol sa Laro</a>
+                <a href="/#community" class="hover:text-blood transition font-medium">Chismis</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="inline-flex items-center rounded-full bg-white/5 p-1 border border-white/10 text-xs font-semibold">
+                    <span class="px-2.5 py-1 rounded-full bg-red-600/30 text-white border border-red-500/40 flex items-center gap-1" aria-current="page">
+                        <span>🇵🇭</span><span>Taglish</span>
+                    </span>
+                    <a href="/en/blog/day-1-walkthrough-guide" class="px-2.5 py-1 rounded-full text-cream/60 hover:text-white transition flex items-center gap-1" title="English Version">
+                        <span>🌐</span><span class="hidden sm:inline">English</span>
+                    </a>
+                </div>
+                <a href="/#play" class="text-xs text-blood font-bold px-3 py-1.5 rounded-lg bg-blood/10 border border-blood/20 hover:bg-blood/20 transition">Laruin Na ▾</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============ ARTICLE CONTENT ============ -->
+    <main class="flex-1 py-10 md:py-16">
+        <article class="max-w-3xl mx-auto px-4">
+
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-mute mb-6" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-white transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-white transition">Mga Gabay</a>
+                <span>/</span>
+                <span class="text-cream font-semibold truncate" aria-current="page">Day 1 Walkthrough</span>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="border-b border-white/10 pb-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/60 border border-red-500/30 text-xs font-semibold text-red-300 mb-3">
+                    <span>☕</span><span>Walkthrough &amp; Survival Tips</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                    Gabay sa Day 1: Buong Walkthrough mula kay Junjun Hanggang sa Hatinggabi
+                </h1>
+                <p class="mt-4 text-cream/80 text-base sm:text-lg leading-relaxed">
+                    Pagpasok mo sa shift sa tindahan, isang tahimik na gabi ang sasalubong sa'yo. Narito ang komprehensibong sunod-sunod na gabay kung paano asikasuhin ang mga mamimili, gamitin ang estante, at makaligtas sa unang gabi.
+                </p>
+                <div class="mt-5 flex flex-wrap items-center gap-4 text-xs text-mute">
+                    <span>Nakasulat: <strong>Komunidad ng Narinig Mo Ba</strong></span>
+                    <span>•</span>
+                    <span>Update: <strong>Setyembre 9, 2026</strong></span>
+                    <span>•</span>
+                    <span>Oras ng Pagbasa: <strong>5 minuto</strong></span>
+                </div>
+            </header>
+
+            <!-- Quick Answer Featured Box -->
+            <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-panel border-l-4 border-l-amber border border-white/10 shadow-lg">
+                <span class="text-xs uppercase tracking-wider font-bold text-amber block mb-1">Mabilisang Sagot (Quick Answer)</span>
+                <p class="text-cream text-sm sm:text-base leading-relaxed">
+                    Sa <strong>Day 1 ng Narinig Mo Ba?</strong>, unang bibisita ang batang si Junjun para bumili ng <em>stick ng kape</em>. Igalaw ang mouse sa kaliwa upang tignan ang estante ng paninda, i-click ang tamang sachet, dalhin ito sa counter, at <strong>mag-hold ng Right Click</strong> para i-verify ang presyo. Pagkatapos i-abot, gamitin ang cash drawer at solar calculator para mag-sukli bago pakinggan ang mga nakakapanindig-balahibong chismis ni Mare sa hatinggabi.
+                </p>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mt-8 rounded-2xl overflow-hidden border border-white/10 shadow-xl bg-black/50">
+                <img src="/images/junjun-1200.webp" alt="Si Junjun sa counter ng sari-sari store" class="w-full h-auto block" loading="lazy">
+                <div class="py-2.5 px-4 bg-black/70 text-center text-xs text-mute border-t border-white/5">
+                    Ang unang mamimili: Si Junjun na humihingi ng stick ng kape sa hatinggabi.
+                </div>
+            </div>
+
+            <!-- Prose Content -->
+            <div class="mt-10 space-y-8 text-cream/85 text-base sm:text-lg leading-relaxed">
+                
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">1. Pagsisimula ng Shift sa Tindahan</h2>
+                    <p class="mt-3">
+                        Pagsisimula ng laro, makikita mo ang iyong sarili sa loob ng tipikal na sari-sari store sa Pilipinas. Sa iyong harapan ay ang kahoy na counter na may rehas, isang cash drawer sa ibaba, at isang maliit na solar calculator.
+                    </p>
+                    <p class="mt-3">
+                        <strong>Importanteng Pahiwatig:</strong> Huwag magmadali sa pag-click. Ang laro ay isang <em>story-driven psychological horror</em>, kaya bawat diyalogo at bawat kaluskos sa paligid ay may malalim na koneksyon sa kwento.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">2. Pagdating ni Junjun (Order: Stick ng Kape)</h2>
+                    <p class="mt-3">
+                        Ilang sandali lang matapos buksan ang tindahan, maririnig mo ang marahang katok sa rehas. Dito mo makikilala si <strong>Junjun</strong>, isang batang kapitbahay na inutusan ng kanyang pamilya.
+                    </p>
+                    <div class="mt-4 p-4 rounded-xl bg-white/5 border border-white/10 text-sm sm:text-base italic text-amber">
+                        "Pabili po... Ate, pabili po ng isang stick ng kape..."
+                    </div>
+                    <p class="mt-3">
+                        Upang kumpletuhin ang order:
+                    </p>
+                    <ol class="mt-3 list-decimal list-inside space-y-2 text-sm sm:text-base text-cream/90 pl-2">
+                        <li><strong>Igalaw ang cursor sa kaliwang gilid ng screen</strong> para lumipat ang view sa estante ng mga nakasabit na sachets.</li>
+                        <li>Hanapin ang nakasabit na instant coffee stick.</li>
+                        <li><strong>I-click ang Left Click</strong> para kunin ang item.</li>
+                        <li>Igalaw ang cursor pabalik sa kanang bahagi patungo sa counter.</li>
+                        <li>Kung hindi ka sigurado sa presyo, <strong>i-hold ang Right Click</strong> habang nakaturo sa item upang basahin ang nakasulat na tag.</li>
+                        <li>I-click sa tapat ni Junjun para maiabot ang paninda.</li>
+                    </ol>
+                </section>
+
+                <!-- Callout Warning -->
+                <blockquote class="p-5 rounded-2xl bg-red-950/40 border border-red-500/30 text-red-200 text-sm sm:text-base my-6">
+                    <strong>💡 Pro Tip sa Pag-soli ng Mali:</strong> Kung aksidente mong napulot ang maling paninda (halimbawa, shampoo sa halip na kape), <strong>pindutin at i-hold ang Left Click</strong> upang maibalik ito nang ligtas sa estante nang hindi nagkakamali sa mamimili.
+                </blockquote>
+
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">3. Paggamit ng Cash Drawer at Calculator</h2>
+                    <p class="mt-3">
+                        Pagka-abot ng kape, maglalapag si Junjun ng kanyang bayad. Dito magsisimula ang cash handling mechanic ng <em>Narinig Mo Ba?</em>:
+                    </p>
+                    <ul class="mt-3 list-disc list-inside space-y-2 text-sm sm:text-base text-cream/90 pl-2">
+                        <li>Tignan ang halagang iniabot sa counter.</li>
+                        <li>I-click ang calculator upang kalkulahin ang tamang sukli (Halimbawa: Bayad minus Presyo ng Kape).</li>
+                        <li>Buksan ang <strong>cash drawer</strong> sa pamamagitan ng pag-click dito.</li>
+                        <li>Pumili sa mga nakahilerang barya (₱1, ₱5, ₱10, ₱20) o perang papel (₱50, ₱100, ₱500, ₱1,000) hanggang mapuno ang eksaktong halaga ng sukli.</li>
+                        <li>I-abot ang sukli kay Junjun.</li>
+                    </ul>
+                    <p class="mt-3">
+                        Magpapasalamat si Junjun bago tahimik na aalis sa dilim. Panoorin ang kanyang paglayo sa labas ng rehas — may kakaibang tensyon sa paligid ng kalsada na magsisimulang magparamdam.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">4. Ang Pagdating ni Mare at ang mga Bulong</h2>
+                    <p class="mt-3">
+                        Kasunod ni Junjun, darating ang isa sa pinaka-maimpluwensyang karakter sa laro — si <strong>Mare</strong>, ang reyna ng chismis sa barangay.
+                    </p>
+                    <p class="mt-3">
+                        Dito hihilingin sa'yo ng laro na <strong>pumili ng mga diyalogo</strong>. Makinig nang mabuti sa kanyang boses. Ang kanyang mga katanungan tungkol sa mga kapitbahay, sa mga nagdaang trahedya, at sa kung <em>"Narinig mo ba?"</em> ang magbubukas ng misteryo ng laro.
+                    </p>
+                    <p class="mt-3">
+                        <strong>Paano makaligtas:</strong> Panatilihing kalmado ang iyong mga sagot, huwag magpadalos-dalos, at palaging pakinggan ang tunog ng paligid — lalo na ang paghinto ng huni ng mga kuliglig sa labas.
+                    </p>
+                </section>
+
+            </div>
+
+            <!-- In-article Play CTA Card -->
+            <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-red-950/60 via-panel to-red-950/40 border border-red-500/30 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-amber font-bold">Subukan Mo Na</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white mt-1">Gusto mo bang subukan ang iyong shift ngayon?</h3>
+                    <p class="text-cream/75 text-sm mt-1">Laruin ang Narinig Mo Ba? nang libre mismo sa iyong browser.</p>
+                </div>
+                <a href="/#play" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-extrabold text-sm tracking-wide shadow-xl shadow-red-900/50 transition shrink-0">
+                    ▶ MAGLARO SA BROWSER
+                </a>
+            </div>
+
+            <!-- Related Guides Section -->
+            <div class="mt-14 pt-8 border-t border-white/10">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    <span>📚</span><span>Iba Pang Mahahalagang Gabay</span>
+                </h3>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <a href="/blog/controls-calculator-mechanics.html" class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-amber/40 transition flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[11px] font-bold text-amber uppercase">Mekanismo</span>
+                            <h4 class="text-sm font-bold text-white mt-1 group-hover:text-amber transition">Kontrol at Calculator</h4>
+                            <p class="text-xs text-mute mt-1 line-clamp-2">Kumpletong gabay sa pag-sukli at pag-check ng presyo.</p>
+                        </div>
+                        <span class="text-xs text-amber font-semibold mt-3">Basahin →</span>
+                    </a>
+                    <a href="/blog/story-lore-chismis-secrets.html" class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/40 transition flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[11px] font-bold text-purple-300 uppercase">Teorya &amp; Kwento</span>
+                            <h4 class="text-sm font-bold text-white mt-1 group-hover:text-purple-300 transition">Paliwanag sa Kwento</h4>
+                            <p class="text-xs text-mute mt-1 line-clamp-2">Ang madilim na trahedya sa likod ng sari-sari store.</p>
+                        </div>
+                        <span class="text-xs text-purple-300 font-semibold mt-3">Basahin →</span>
+                    </a>
+                    <a href="/blog/download-apk-mobile-guide.html" class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-400/40 transition flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[11px] font-bold text-emerald-300 uppercase">Download</span>
+                            <h4 class="text-sm font-bold text-white mt-1 group-hover:text-emerald-300 transition">Download at Mobile APK</h4>
+                            <p class="text-xs text-mute mt-1 line-clamp-2">Katotohanan sa mobile app at PC download options.</p>
+                        </div>
+                        <span class="text-xs text-emerald-300 font-semibold mt-3">Basahin →</span>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-white/10 bg-black/60 py-10 mt-12">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-mute">
+            <div class="flex items-center gap-3">
+                <img src="/images/logo.png" alt="Logo" class="w-6 h-6 object-contain">
+                <span>© 2026 Narinig Mo Ba? Fan Wiki at Gabay. Nilikha ng komunidad para sa mga manlalaro.</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="/" class="hover:text-cream transition">Home</a>
+                <a href="/blog/" class="text-cream font-medium">Mga Gabay</a>
+                <a href="/contact" class="hover:text-cream transition">Kontak</a>
+                <a href="/privacy" class="hover:text-cream transition">Privacy</a>
+                <a href="/terms" class="hover:text-cream transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

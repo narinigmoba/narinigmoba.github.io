@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narinig Mo Ba? — Play Free Online Psychological Horror Game</title>
+    <meta name="description" content="Play Narinig Mo Ba? (A Sari-Sorry Story) free online in your browser. A Filipino psychological horror indie game created for Game Jam Los Baños 2026. Tend a sari-sari store open both ways and uncover a tragic community secret.">
+    <meta name="keywords" content="Narinig Mo Ba, Narinig Mo Ba game, Did You Hear That game, Filipino horror game, sari sari store game, Game Jam Los Baños 2026, psychological horror, Pinoy indie game, chismis game, doppie itch io">
+    <meta name="author" content="Fan community — original game by VC Studios (doppie, krarneas, oreocapybara, alasdiel, yuriellll, csr_eio)">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://narinigmoba.github.io/en/">
+    <link rel="alternate" hreflang="fil-PH" href="https://narinigmoba.github.io/">
+    <link rel="alternate" hreflang="tl" href="https://narinigmoba.github.io/">
+    <link rel="alternate" hreflang="en" href="https://narinigmoba.github.io/en/">
+    <link rel="alternate" hreflang="x-default" href="https://narinigmoba.github.io/">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="theme-color" content="#0d0a0d">
+
+    <!-- Google Consent Mode v2: defaults must load BEFORE AdSense / GA4 -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'granted',
+            'functionality_storage': 'granted',
+            'security_storage': 'granted',
+            'wait_for_update': 500
+        });
+    </script>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43EZV53Q7P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-43EZV53Q7P');
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Narinig Mo Ba?">
+    <meta property="og:title" content="Narinig Mo Ba? — Play Free Online Psychological Horror Game">
+    <meta property="og:description" content="Play Narinig Mo Ba? (Did You Hear That?) free in your browser. Tend an ordinary sari-sari store late at night until neighborhood rumors turn into bone-chilling horror.">
+    <meta property="og:image" content="https://narinigmoba.github.io/images/og-card.png">
+    <meta property="og:url" content="https://narinigmoba.github.io/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Narinig Mo Ba? — Play Free Online Psychological Horror Game">
+    <meta name="twitter:description" content="Play Narinig Mo Ba? (Did You Hear That?) free in your browser. Tend a Filipino sari-sari store until the chismis reveals terrifying truths.">
+    <meta name="twitter:image" content="https://narinigmoba.github.io/images/og-card.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink:   '#0d0a0d',
+                        cream: '#f7f2ea',
+                        mute:  '#9e929b',
+                        blood: '#e63946',
+                        amber: '#ffb703',
+                        panel: '#160e13',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        summary { list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+    </style>
+
+    <!-- Structured data: VideoGame -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Narinig Mo Ba?",
+        "alternateName": ["Did You Hear That?", "A Sari-Sorry Story"],
+        "description": "A Filipino psychological horror indie game disguised as a cozy neighborhood sari-sari store simulation. Entry for Game Jam Los Baños 2026 by VC Studios.",
+        "genre": ["Psychological Horror", "Visual Novel", "Simulation", "Indie Game"],
+        "gamePlatform": ["Web Browser", "HTML5", "PC", "Linux", "Windows"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Any (Web Browser)",
+        "url": "https://narinigmoba.github.io/",
+        "image": "https://narinigmoba.github.io/images/og-card.png",
+        "inLanguage": ["en", "tl"],
+        "playMode": "SinglePlayer",
+        "isAccessibleForFree": true,
+        "contentRating": "Teen (Psychological Horror Themes)",
+        "author": {
+            "@type": "Organization",
+            "name": "VC Studios",
+            "member": [
+                { "@type": "Person", "name": "Anthony James", "alternateName": "doppie" },
+                { "@type": "Person", "name": "Faye Saulon", "alternateName": "krarneas" },
+                { "@type": "Person", "name": "Charles Espiloy", "alternateName": "oreocapybara" },
+                { "@type": "Person", "name": "Alex :D", "alternateName": "karinasaurus" },
+                { "@type": "Person", "name": "Rex Uriel Villaflores", "alternateName": "yuriellll" },
+                { "@type": "Person", "name": "Ed Ian Baguio", "alternateName": "csr_eio" }
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "VC Studios"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <!-- Structured data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Narinig Mo Ba?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Narinig Mo Ba? (Tagalog for 'Did You Hear That?') is a story-driven psychological horror indie game created in the Philippines. It combines the everyday routine of running a traditional sari-sari store with creeping dread as neighborhood gossip (chismis) uncovers tragic and supernatural community secrets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you play Narinig Mo Ba?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You interact with neighborhood customers through the wooden store grill window. You hand over requested grocery items, count change, and converse with visitors. Pay close attention to dialogue choices, auditory cues, and the radio broadcast to piece together the unfolding mystery."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Narinig Mo Ba free to play?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Narinig Mo Ba is free to experience online right inside your browser. The original developers shared it with the indie community, and this fan tribute site provides browser access, lore guides, and discussion hubs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a sari-sari store?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A sari-sari store is an iconic small neighborhood convenience shop ubiquitous across the Philippines, typically operated from a front window of a family home behind wooden bars or metal grills. They serve as community gathering points where locals buy everyday essentials and exchange neighborhood news (chismis)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are there multiple endings in Narinig Mo Ba?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The decisions you make when speaking to late-night customers, how quickly you respond to unsettling auditory cues, and which rumors you investigate determine which secrets you uncover and the fate of your storekeeper."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured data: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Narinig Mo Ba?",
+        "url": "https://narinigmoba.github.io/",
+        "inLanguage": "en"
+    }
+    </script>
+</head>
+
+<body id="top" class="bg-ink text-cream font-sans antialiased">
+
+    <!-- ============ STICKY NAV ============ -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-ink/85 border-b border-white/10">
+        <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-2.5 font-extrabold text-lg tracking-tight">
+                <img src="/images/logo.png" alt="Narinig Mo Ba? Logo" class="w-8 h-8 rounded-md object-contain">
+                <span class="text-white">Narinig Mo Ba?</span>
+            </a>
+            <div class="hidden md:flex items-center gap-5 text-sm text-cream/80">
+                <a href="#about" class="hover:text-blood transition font-medium">About</a>
+                <a href="#features" class="hover:text-blood transition font-medium">Features</a>
+                <a href="#characters" class="hover:text-blood transition font-medium">Characters</a>
+                <a href="#video" class="hover:text-blood transition font-medium">Video</a>
+                <a href="#how-to-play" class="hover:text-blood transition font-medium">How to Play</a>
+                <a href="/en/blog/" class="hover:text-blood transition font-medium text-amber flex items-center gap-1">
+                    <span>📚</span><span>Guides</span>
+                </a>
+                <a href="#faq" class="hover:text-blood transition font-medium">FAQ</a>
+                <a href="#community" class="hover:text-blood transition font-medium">Community</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="inline-flex items-center rounded-full bg-white/5 p-1 border border-white/10 text-xs font-semibold">
+                    <a href="/" class="px-2.5 py-1 rounded-full text-cream/60 hover:text-white transition flex items-center gap-1" title="Taglish (Filipino)">
+                        <span>🇵🇭</span><span class="hidden sm:inline">Taglish</span>
+                    </a>
+                    <span class="px-2.5 py-1 rounded-full bg-red-600/30 text-white border border-red-500/40 flex items-center gap-1" aria-current="page">
+                        <span>🌐</span><span>English</span>
+                    </span>
+                </div>
+                <a href="#play" class="md:hidden text-xs text-blood font-bold px-2.5 py-1.5 rounded-lg bg-blood/10 border border-blood/20">Play ▾</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============ HERO & GAME STAGE ============ -->
+    <section id="play" class="scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 pt-5 pb-12 md:pt-8 md:pb-16">
+            <!-- Game card container -->
+            <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 bg-panel">
+                <!-- Card header -->
+                <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-white/10">
+                    <div class="flex items-center gap-2 min-w-0">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse shrink-0" aria-hidden="true"></span>
+                        <span class="font-bold text-sm sm:text-base truncate">Play Narinig Mo Ba? (Did You Hear That?)</span>
+                    </div>
+                    <div class="text-xs text-mute font-medium hidden sm:block">
+                        🎧 Headphones Recommended for Best Audio Cues
+                    </div>
+                </div>
+
+                <!-- Game stage: Fullscreen targets this container -->
+                <div id="game-stage" class="relative bg-black aspect-[16/9] md:aspect-[16/9.5] overflow-hidden flex items-center justify-center">
+                    <!-- Default Cover overlay with Start Game Button -->
+                    <div id="game-cover" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-6 bg-cover bg-center select-none transition-opacity duration-500"
+                         style="background-image: linear-gradient(to top, rgba(13, 10, 13, 0.95), rgba(13, 10, 13, 0.72)), url('/images/cover-1200.webp');">
+                        
+                        <div class="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/70 border border-red-500/30 text-xs font-semibold text-red-300 backdrop-blur-sm">
+                            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                            <span>A Sari-Sorry Story • Web Edition</span>
+                        </div>
+
+                        <h3 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight drop-shadow-md">
+                            Narinig Mo Ba?
+                        </h3>
+                        <p class="mt-2 text-xs sm:text-sm text-cream/80 max-w-md line-clamp-2">
+                            Mind the sari-sari store counter. Calculate peso change and listen closely to the whispers before midnight.
+                        </p>
+
+                        <!-- Big Play Button -->
+                        <button id="start-game-btn" type="button"
+                                class="mt-5 sm:mt-6 group relative inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white font-extrabold text-base sm:text-lg tracking-wide shadow-xl shadow-red-900/60 hover:shadow-red-600/50 hover:scale-105 active:scale-95 transition-all duration-200 border border-red-400/40 cursor-pointer">
+                            <span class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white text-xs pl-0.5 group-hover:bg-white group-hover:text-red-600 transition">▶</span>
+                            <span>START GAME</span>
+                        </button>
+
+                        <div class="mt-4 flex items-center gap-3 text-[11px] sm:text-xs text-mute/80">
+                            <span>🎧 Headphones Recommended</span>
+                            <span>•</span>
+                            <span>Free Browser Play</span>
+                            <span>•</span>
+                            <span>No Download</span>
+                        </div>
+                    </div>
+
+                    <!-- Loading state indicator -->
+                    <div id="game-loader" class="hidden absolute inset-0 z-20 flex-col items-center justify-center bg-black/92 backdrop-blur-sm text-center p-6 transition-opacity duration-300">
+                        <div class="w-12 h-12 border-4 border-red-600/20 border-t-red-500 rounded-full animate-spin mb-4"></div>
+                        <p class="text-white font-bold text-base sm:text-lg tracking-wide">Opening the Sari-Sari Store...</p>
+                        <p class="text-xs text-mute mt-1.5 max-w-xs">Loading Godot Web Engine &amp; Audio Assets. Click inside once loaded to start.</p>
+                    </div>
+
+                    <!-- Iframe mounting container -->
+                    <div id="game-iframe-wrapper" class="w-full h-full hidden">
+                        <!-- Loaded dynamically on button click -->
+                    </div>
+                </div>
+
+                <!-- Action toolbar -->
+                <div class="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2.5 border-t border-white/10">
+                    <button type="button" data-action="like"
+                            class="inline-flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/5 transition text-cream/70 font-semibold text-sm"
+                            aria-label="Like this game"
+                            data-like-seed="642">
+                        <span data-role="like-icon" aria-hidden="true">♡</span>
+                        <span data-role="like-count">642</span>
+                    </button>
+
+                    <a href="#community" data-action="comment"
+                       class="inline-flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/5 transition text-cream/70 font-semibold text-sm">
+                        <span aria-hidden="true">💬</span>
+                        <span class="hidden sm:inline">Community</span>
+                    </a>
+
+                    <button type="button" data-action="share"
+                            class="inline-flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/5 transition text-cream/70 font-semibold text-sm"
+                            aria-label="Share this game">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                        <span data-role="share-label" class="hidden sm:inline">Share</span>
+                    </button>
+
+                    <button type="button" data-action="fullscreen"
+                            class="ml-auto inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/5 hover:bg-white/10 transition text-cream font-semibold text-sm border border-white/10"
+                            aria-label="Play in fullscreen">
+                        <span data-role="fs-icon" aria-hidden="true">⛶</span>
+                        <span class="hidden sm:inline">Fullscreen</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Headline & Intro -->
+            <div class="mt-10 text-center max-w-3xl mx-auto">
+                <p class="text-xs uppercase tracking-widest text-amber font-bold mb-2">A Sari-Sorry Story • "Huy, Mare! Narinig mo ba?"</p>
+                <h1 class="font-black text-4xl md:text-6xl leading-tight tracking-tight text-white">
+                    Narinig Mo Ba?
+                </h1>
+                <p class="mt-3 text-lg md:text-xl text-amber font-semibold tracking-wide">
+                    "Did You Hear That?" — A Filipino Psychological Horror Indie Game
+                </p>
+                <p class="mt-4 text-base md:text-lg text-cream/80 leading-relaxed">
+                    Step behind the counter of an ordinary <strong>sari-sari store</strong>. Hand over coffee sticks, calculate loose peso change, and listen closely to the neighborhood <em>chismis</em>. But in this quiet community, a desperate act of survival has set off a chain reaction — and unfortunately for you, the shop has been left open both ways.
+                </p>
+                <div class="mt-6 flex flex-wrap justify-center gap-2.5 text-xs font-semibold">
+                    <span class="px-3 py-1.5 rounded-full bg-red-500/15 text-red-400 border border-red-500/30">100% Free Browser Play</span>
+                    <span class="px-3 py-1.5 rounded-full bg-white/5 text-cream/80 border border-white/10">Game Jam Los Baños 2026</span>
+                    <span class="px-3 py-1.5 rounded-full bg-white/5 text-cream/80 border border-white/10">No Generative AI • 100% Hand-Drawn</span>
+                    <span class="px-3 py-1.5 rounded-full bg-amber/10 text-amber border border-amber/30">Psychological Narrative</span>
+                </div>
+
+                <!-- Panoramic Neighborhood Artwork Banner -->
+                <div class="mt-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 bg-[#160e13]">
+                    <img src="/images/og.png"
+                         alt="Narinig Mo Ba? - A Sari-Sorry Story original game artwork"
+                         class="w-full h-auto block"
+                         loading="lazy">
+                    <div class="py-2 px-4 bg-black/50 text-center text-xs text-mute flex items-center justify-center gap-2 border-t border-white/5">
+                        <span>🏚️</span>
+                        <span>"LodaSoda — Narinig Mo Ba? A Sari-Sorry Story" • Original Artwork by VC Studios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="scroll-mt-20 py-14 md:py-20 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-blood font-bold">The Premise</span>
+                <h2 class="mt-2 font-extrabold text-3xl md:text-4xl text-white">
+                    Cozy Everyday Routine Meets Creeping Dread
+                </h2>
+                <p class="mt-5 text-cream/85 leading-relaxed">
+                    Created for <strong>Game Jam Los Baños 2026</strong> by the talented student team at <strong>VC Studios</strong> (led by <em>Anthony James / doppie</em>), <em>Narinig Mo Ba?</em> takes one of the most familiar and comforting symbols of Philippine daily life — the neighborhood sari-sari store — and subverts it into a masterclass of psychological tension.
+                </p>
+                <p class="mt-4 text-cream/85 leading-relaxed">
+                    At first glance, your shift seems completely mundane: handing over small sachets of coffee, instant noodles, and canned sardines while returning change from the cash drawer. But as midnight approaches, whispered rumors piece together a tragic local secret. All art was lovingly illustrated in-house with zero generative AI, complemented by authentic CC0 sound design.
+                </p>
+                <div class="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+                    <span class="text-2xl">📻</span>
+                    <p class="text-xs text-cream/75 leading-relaxed">
+                        <strong>Audio Warning:</strong> Subtle audio shifts, distant whispers, and crackling radio broadcasts are crucial clues. Wearing headphones is strongly advised.
+                    </p>
+                </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50">
+                <img src="/images/store-640.webp"
+                     alt="A customer ordering groceries at the sari-sari store counter"
+                     class="w-full h-auto block" loading="lazy">
+                <div class="py-2 px-4 bg-black/60 text-center text-xs text-mute/80 border-t border-white/5">
+                    Tending the counter • Groceries, change &amp; neighborhood chismis
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="scroll-mt-20 py-14 md:py-20 bg-panel border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-xs uppercase tracking-widest text-amber font-bold">Game Mechanics</span>
+                <h2 class="mt-2 font-extrabold text-3xl md:text-4xl text-white">Why It Hooks You</h2>
+                <p class="mt-3 text-mute text-sm md:text-base">Experience a unique blend of narrative discovery, authentic cultural setting, and psychological tension.</p>
+            </div>
+
+            <div class="mt-12 grid sm:grid-cols-2 gap-6">
+                <div class="rounded-2xl p-6 bg-white/5 border border-white/10 backdrop-blur hover:border-red-500/30 transition">
+                    <div class="text-3xl" aria-hidden="true">🗣️</div>
+                    <h3 class="mt-4 font-bold text-xl text-white">Chismis Investigation System</h3>
+                    <p class="mt-2 text-cream/80 text-sm leading-relaxed">
+                        In the Philippines, "chismis" (neighborhood gossip) spreads fast. In <em>Narinig Mo Ba?</em>, gossip is your primary survival mechanism. Sift through rumors to differentiate harmless neighborhood drama from life-saving warnings.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl p-6 bg-white/5 border border-white/10 backdrop-blur hover:border-red-500/30 transition">
+                    <div class="text-3xl" aria-hidden="true">👂</div>
+                    <h3 class="mt-4 font-bold text-xl text-white">Atmospheric Audio Cues</h3>
+                    <p class="mt-2 text-cream/80 text-sm leading-relaxed">
+                        The titular question "Narinig mo ba?" (Did you hear that?) drives the gameplay. You must pay attention to footfalls on gravel, sudden stops in cricket chirps, and strange knocking on the corrugated metal roof.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl p-6 bg-white/5 border border-white/10 backdrop-blur hover:border-red-500/30 transition">
+                    <div class="text-3xl" aria-hidden="true">🪟</div>
+                    <h3 class="mt-4 font-bold text-xl text-white">The Vulnerable Grill Window</h3>
+                    <p class="mt-2 text-cream/80 text-sm leading-relaxed">
+                        You view the dark street through narrow wooden or metal bars. Customers stand just inches away, yet you can rarely see clearly into the shadows behind them.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl p-6 bg-white/5 border border-white/10 backdrop-blur hover:border-red-500/30 transition">
+                    <div class="text-3xl" aria-hidden="true">🎭</div>
+                    <h3 class="mt-4 font-bold text-xl text-white">Branching Endings</h3>
+                    <p class="mt-2 text-cream/80 text-sm leading-relaxed">
+                        Every transaction and dialogue branch has consequences. Will you close the wooden shutters in time, or will curiosity lead you to peer too far into the darkness?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CHARACTERS ============ -->
+    <section id="characters" class="scroll-mt-20 py-14 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="md:order-2">
+                <span class="text-xs uppercase tracking-widest text-blood font-bold">The Community</span>
+                <h2 class="mt-2 font-extrabold text-3xl md:text-4xl text-white">
+                    Meet the Late-Night Regulars
+                </h2>
+                <p class="mt-4 text-cream/85 leading-relaxed">
+                    Not everyone who knocks on the sari-sari store grill at 2:00 AM wants a quick sachet of coffee. Pay attention to who is standing on the other side of your counter:
+                </p>
+
+                <div class="mt-6 space-y-3.5">
+                    <div class="rounded-2xl p-4 bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-lg text-amber">Junjun</h3>
+                            <span class="text-[11px] px-2 py-0.5 rounded-full bg-amber/10 text-amber border border-amber/20 font-semibold">First Customer</span>
+                        </div>
+                        <p class="mt-1.5 text-cream/80 text-sm leading-relaxed">A soft-spoken neighborhood youth who visits your counter first thing to buy a stick of coffee. Polite and grateful (<em>"Salamat ulit, Ate..."</em>), his quiet words hint at deep personal struggles and eerie happenings nearby.</p>
+                    </div>
+
+                    <div class="rounded-2xl p-4 bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-lg text-amber">Mare</h3>
+                            <span class="text-[11px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 font-semibold">Gossip Catalyst</span>
+                        </div>
+                        <p class="mt-1.5 text-cream/80 text-sm leading-relaxed">The eponymous neighbor whose opening line drives the game (<em>"Huy, Mare! Narinig mo ba?"</em>). Her casual orders carry the latest neighborhood news, peeling back the layers of a tragic local event.</p>
+                    </div>
+
+                    <div class="rounded-2xl p-4 bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-lg text-cream">The Storekeeper (You)</h3>
+                            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-cream/70 font-semibold">Protagonist</span>
+                        </div>
+                        <p class="mt-1.5 text-cream/80 text-sm leading-relaxed">Tasked with minding the family sari-sari store through the quiet hours. With the shop exposed from both sides, you must count change, bag groceries, and survive the shift intact.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:order-1 rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50">
+                <img src="/images/junjun-1200.webp"
+                     alt="Junjun ordering at the sari-sari store counter in Narinig Mo Ba"
+                     class="w-full h-auto block" loading="lazy">
+                <div class="py-2 px-4 bg-black/60 text-center text-xs text-mute/80 border-t border-white/5">
+                    Junjun at the store counter • Original game artwork by VC Studios
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURED VIDEO ============ -->
+    <section id="video" class="scroll-mt-20 py-14 md:py-20 bg-gradient-to-b from-[#140e13] via-[#1a1118] to-[#120d11] border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/70 border border-red-500/30 text-xs font-semibold text-red-300 backdrop-blur-sm mb-3">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                    <span>Gameplay Showcase</span>
+                </div>
+                <h2 class="font-extrabold text-3xl md:text-4xl text-white tracking-tight">
+                    Featured Gameplay: Sari-Sari Store Horror in Action
+                </h2>
+                <p class="mt-3 text-mute text-sm md:text-base leading-relaxed">
+                    Watch popular Filipino creator <strong>Patrick Santos</strong> navigate the midnight shift, serve customers, count coins, and experience the uncanny neighborhood rumors firsthand.
+                </p>
+            </div>
+
+            <!-- Video Player Box -->
+            <div class="mt-8 md:mt-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 bg-black/60 p-2 sm:p-3 backdrop-blur-sm">
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-black">
+                    <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube-nocookie.com/embed/S0nm6eTv-AE?rel=0&amp;modestbranding=1"
+                            title="Cozy Filipino Sari-sari Store Simulator na Horror Game (Narinig Mo Ba?)"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                            loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- Video Info Bar -->
+                <div class="p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-white/5 mt-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-400 font-bold text-base shrink-0">
+                            ▶
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-white text-sm">Patrick Santos</span>
+                                <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber/15 text-amber font-semibold border border-amber/20">Featured Creator</span>
+                            </div>
+                            <p class="text-xs text-mute mt-0.5">Cozy Filipino Sari-sari Store Simulator na Horror Game (Narinig Mo Ba?)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 self-end sm:self-auto">
+                        <a href="#play" class="text-xs font-bold px-4 py-2 rounded-xl bg-red-600/20 hover:bg-red-600/30 text-red-300 border border-red-500/30 transition flex items-center gap-1.5">
+                            <span>🎮</span><span>Play Game Above</span>
+                        </a>
+                        <a href="/en/blog/day-1-walkthrough-guide.html" class="text-xs font-bold px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-cream/80 border border-white/10 transition flex items-center gap-1.5">
+                            <span>📖</span><span>Read Day 1 Walkthrough</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW TO PLAY ============ -->
+    <section id="how-to-play" class="scroll-mt-20 py-14 md:py-20 bg-panel border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-xs uppercase tracking-widest text-amber font-bold">Storekeeper's Guide</span>
+                <h2 class="mt-2 font-extrabold text-3xl md:text-4xl text-white">How to Survive Your Shift</h2>
+                <p class="mt-3 text-mute text-sm">Essential shopkeeping controls and survival tips from the official release.</p>
+            </div>
+
+            <div class="mt-10 grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+                <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+                    <span class="text-2xl font-black text-blood">01</span>
+                    <h3 class="mt-2 font-bold text-base text-white">Navigate the Shop</h3>
+                    <p class="mt-1 text-xs text-cream/75 leading-relaxed">Move your cursor to the screen edges to glance between the grocery <strong>shelves</strong>, hanging <strong>sachets</strong>, the <strong>fridge</strong>, and the main <strong>counter</strong>.</p>
+                </div>
+
+                <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+                    <span class="text-2xl font-black text-blood">02</span>
+                    <h3 class="mt-2 font-bold text-base text-white">Pick, Check &amp; Return</h3>
+                    <p class="mt-1 text-xs text-cream/75 leading-relaxed"><strong>Left click</strong> to pick up or hand over items. <strong>Hold right click</strong> to inspect item prices. <strong>Hold left click</strong> to put items back on shelves.</p>
+                </div>
+
+                <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+                    <span class="text-2xl font-black text-blood">03</span>
+                    <h3 class="mt-2 font-bold text-base text-white">Calculate Change</h3>
+                    <p class="mt-1 text-xs text-cream/75 leading-relaxed">Use the desktop calculator to sum the order. Count exact Philippine Peso change from the drawer (₱1–₱20 coins &amp; ₱50–₱1,000 bills).</p>
+                </div>
+
+                <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+                    <span class="text-2xl font-black text-blood">04</span>
+                    <h3 class="mt-2 font-bold text-base text-white">Sift the Chismis</h3>
+                    <p class="mt-1 text-xs text-cream/75 leading-relaxed">Listen closely as conversations continue post-transaction. Local rumors hide life-saving clues about what is happening outside.</p>
+                </div>
+            </div>
+
+            <!-- Cash Drawer Highlight -->
+            <div class="mt-10 rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-6 grid md:grid-cols-2 gap-8 items-center">
+                <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                    <img src="/images/cash-drawer-640.webp"
+                         alt="The peso notes and coins in the cash drawer"
+                         class="w-full h-auto block"
+                         loading="lazy">
+                </div>
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-amber font-bold">In-Game Mechanics</span>
+                    <h3 class="mt-2 font-bold text-xl text-white">Counting Change &amp; Authentic Peso Economy</h3>
+                    <p class="mt-3 text-sm text-cream/80 leading-relaxed">
+                        Philippine sari-sari stores run on exact change. Illustrated with authentic peso bills (₱50, ₱100, ₱500, ₱1,000) and coins (₱1, ₱5, ₱10, ₱20), customers might even offer extra coins to break large bills for their daily commute.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="scroll-mt-20 py-14 md:py-20 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs uppercase tracking-widest text-amber font-bold">Frequently Asked Questions</span>
+                <h2 class="mt-2 font-extrabold text-3xl md:text-4xl text-white">Got Questions?</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group rounded-2xl bg-white/5 border border-white/10 p-5 transition hover:border-white/20">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-base text-white">
+                        <span>What is Narinig Mo Ba?</span>
+                        <span class="text-amber group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p class="mt-3 text-sm text-cream/80 leading-relaxed">
+                        <em>Narinig Mo Ba?</em> (Tagalog for "Did You Hear That?") is a story-driven psychological horror indie game created in the Philippines. It combines the everyday routine of running a traditional sari-sari store with creeping dread as neighborhood gossip (chismis) uncovers tragic and supernatural community secrets.
+                    </p>
+                </details>
+
+                <details class="group rounded-2xl bg-white/5 border border-white/10 p-5 transition hover:border-white/20">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-base text-white">
+                        <span>Is Narinig Mo Ba free to play online?</span>
+                        <span class="text-amber group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p class="mt-3 text-sm text-cream/80 leading-relaxed">
+                        Yes! You can play right inside this page in your browser without any downloads or installations required.
+                    </p>
+                </details>
+
+                <details class="group rounded-2xl bg-white/5 border border-white/10 p-5 transition hover:border-white/20">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-base text-white">
+                        <span>What is a Sari-Sari Store?</span>
+                        <span class="text-amber group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p class="mt-3 text-sm text-cream/80 leading-relaxed">
+                        A sari-sari store is an iconic small neighborhood convenience shop ubiquitous across the Philippines, typically operated from a front window of a family home behind wooden bars or metal grills. They serve as community gathering points where locals buy everyday essentials and exchange neighborhood news.
+                    </p>
+                </details>
+
+                <details class="group rounded-2xl bg-white/5 border border-white/10 p-5 transition hover:border-white/20">
+                    <summary class="flex items-center justify-between cursor-pointer font-bold text-base text-white">
+                        <span>Who created the original game?</span>
+                        <span class="text-amber group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p class="mt-3 text-sm text-cream/80 leading-relaxed">
+                        <em>Narinig Mo Ba?</em> was created for <strong>Game Jam Los Baños 2026</strong> by the talented student team at <strong>VC Studios</strong>: Anthony James (<em>doppie</em>), Faye Saulon (<em>krarneas</em>), Charles Espiloy (<em>oreocapybara</em>), Alex (<em>alasdiel / karinasaurus</em>), Rex Uriel Villaflores (<em>yuriellll</em>), and Ed Ian Baguio (<em>csr_eio</em>). All original artwork was drawn in-house without AI generation.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMMUNITY & COMMENTS ============ -->
+    <section id="community" class="scroll-mt-20 py-14 md:py-20 bg-panel border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs uppercase tracking-widest text-blood font-bold">Community Discussion</span>
+                <h2 class="mt-2 font-extrabold text-3xl md:text-4xl text-white">What Did You Hear?</h2>
+                <p class="mt-3 text-mute text-sm">Share your theories, chilling encounters, and late-night store shift experiences.</p>
+            </div>
+
+            <!-- Comment submission form -->
+            <div class="rounded-2xl p-6 bg-white/5 border border-white/10 mb-8 backdrop-blur">
+                <form id="comment-form" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="c-name" class="block text-xs font-semibold uppercase tracking-wider text-mute mb-1">Your Name</label>
+                            <input type="text" id="c-name" name="name" placeholder="Kuya / Ate / Anonymous"
+                                   class="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-white/15 text-cream placeholder:text-mute/50 focus:outline-none focus:border-blood text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="c-text" class="block text-xs font-semibold uppercase tracking-wider text-mute mb-1">Your Comment / Experience</label>
+                        <textarea id="c-text" name="comment" rows="3" required placeholder="Did you hear that whisper at 12:00 AM? Share your thoughts..."
+                                  class="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-white/15 text-cream placeholder:text-mute/50 focus:outline-none focus:border-blood text-sm"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="px-6 py-2.5 rounded-xl bg-blood text-white font-bold text-sm hover:bg-[#ff4d5a] transition shadow-lg shadow-blood/30">
+                        Post Comment
+                    </button>
+                </form>
+            </div>
+
+            <!-- Comment Wall -->
+            <div id="comment-wall" class="space-y-4">
+      <!-- #baked-comments — 由 scripts/sync-comments.mjs 生成，勿手改 -->
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-red-500/20 text-red-400">B</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Baka nmn</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 10, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">Hey developer baka pwede nmn po gumawa kayo  ng for mobile phone wla kase kaming computer</p>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-amber-500/20 text-amber-300">S</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Sam</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 13, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">wala day 1</p>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-amber-500/20 text-amber-300">S</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Sam</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 13, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">walapa. dahil.   hindi. pa ako. nag. lalaro</p>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-cyan-500/20 text-cyan-300">T</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">test</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 9, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">test</p>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-cyan-500/20 text-cyan-300">V</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Verification Bot</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 8, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">Automated test comment: Did you hear that at the store window?</p>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-purple-500/20 text-purple-300">K</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Kuya Jericho</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">August 14, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">As someone who actually looked after our family&#39;s sari-sari store late at night, this game captures the uncanny silence way too accurately. When that whisper asked &#39;Pabili po...&#39; at midnight, I had genuine goosebumps!</p>
+        <div class="mt-3 text-xs text-mute inline-flex items-center gap-1"><span>❤</span><span>42</span></div>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-rose-500/20 text-rose-300">B</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Bea Alcantara</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">August 20, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">The environmental storytelling is insane. Listening to the neighborhood chismis while trying to calculate change for a bottle of vinegar was both hilarious and deeply unsettling.</p>
+        <div class="mt-3 text-xs text-mute inline-flex items-center gap-1"><span>❤</span><span>38</span></div>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-red-500/20 text-red-400">M</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">MidnightGamerPH</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">August 27, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">Sobrang ganda ng audio design! Put on your headphones guys, the subtle scratching sound on the wooden grills will make you check your own room door. 10/10 indie horror masterpiece.</p>
+        <div class="mt-3 text-xs text-mute inline-flex items-center gap-1"><span>❤</span><span>29</span></div>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-amber-500/20 text-amber-300">M</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Mark Santos</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 1, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">The twist with the radio broadcast regarding the abandoned house by the mango tree had me questioning every single regular customer who came to the window.</p>
+        <div class="mt-3 text-xs text-mute inline-flex items-center gap-1"><span>❤</span><span>25</span></div>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-red-500/20 text-red-400">C</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">ChismisQueen99</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 4, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">That moment when you realize the gossip isn&#39;t just town rumors, but hints to save yourself from what&#39;s lurking outside... Kudos to the developers!</p>
+        <div class="mt-3 text-xs text-mute inline-flex items-center gap-1"><span>❤</span><span>19</span></div>
+      </div>
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display font-bold bg-red-500/20 text-red-400">R</div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-semibold truncate">Renzo D.</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full font-semibold bg-amber-500/15 text-amber-400">community</span>
+            </div>
+            <span class="text-xs text-mute">September 6, 2026</span>
+          </div>
+        </div>
+        <p class="mt-3 text-cream/85 text-sm leading-relaxed whitespace-pre-wrap">I never thought serving sardinas and plastic-bag soft drinks could be terrifying. Best Pinoy psychological horror since Night Shift!</p>
+        <div class="mt-3 text-xs text-mute inline-flex items-center gap-1"><span>❤</span><span>16</span></div>
+      </div>
+      <!-- /#baked-comments -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-white/10 py-12 bg-black/40 text-mute text-xs">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img src="/images/logo.png" alt="Narinig Mo Ba?" class="w-6 h-6 rounded object-contain">
+                <span class="font-bold text-cream">Narinig Mo Ba?</span>
+                <span class="hidden sm:inline">|</span>
+                <span>Fan community &amp; browser tribute</span>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6">
+                <a href="/en/blog/" class="hover:text-cream transition text-amber font-semibold">Game Guides</a>
+                <a href="/privacy" class="hover:text-cream transition">Privacy Policy</a>
+                <a href="/terms" class="hover:text-cream transition">Terms of Service</a>
+                <a href="/contact" class="hover:text-cream transition">Contact</a>
+                <a href="/" class="hover:text-cream transition flex items-center gap-1"><span>🇵🇭</span><span>Taglish Version</span></a>
+                <a href="https://doppie.itch.io/narinig-mo-ba" target="_blank" rel="noopener noreferrer" class="hover:text-amber transition">Official Game on itch.io ↗</a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-6 text-center md:text-left text-[11px] text-mute/70 leading-relaxed">
+            Disclaimer: <em>Narinig Mo Ba?</em> is an original indie psychological horror game created by <strong>VC Studios</strong> (Anthony James, Faye Saulon, Charles Espiloy, Alex, Rex Uriel Villaflores, and Ed Ian Baguio) for <strong>Game Jam Los Baños 2026</strong>. This website is an independent fan tribute project for educational and community purposes and is not affiliated with or endorsed by the original authors. Please support the developers by visiting the <a href="https://doppie.itch.io/narinig-mo-ba" target="_blank" rel="noopener noreferrer" class="underline hover:text-cream">official itch.io page</a>.
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script src="/js/comments-data.js"></script>
+    <script src="/js/game-card.js"></script>
+    <script src="/js/comments.js"></script>
+    <script src="/js/consent.js"></script>
+</body>
+</html>

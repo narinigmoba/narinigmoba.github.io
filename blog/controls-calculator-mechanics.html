@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fil" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol at Sukli: Kumpletong Gabay sa Cash Drawer at Calculator — Narinig Mo Ba?</title>
+    <meta name="description"
+        content="Paano mag-presyo, mag-soli ng paninda, at mag-sukli sa Narinig Mo Ba?. Detalyadong gabay sa mouse controls, cash drawer, barya, at solar calculator.">
+    <meta name="keywords"
+        content="narinig mo ba controls, narinig mo ba calculator, narinig mo ba sukli, narinig mo ba cash drawer, paano magsukli narinig mo ba, sari sari store game controls">
+
+    <link rel="canonical" href="https://narinigmoba.github.io/blog/controls-calculator-mechanics">
+    <link rel="alternate" hreflang="fil-PH" href="https://narinigmoba.github.io/blog/controls-calculator-mechanics">
+    <link rel="alternate" hreflang="tl" href="https://narinigmoba.github.io/blog/controls-calculator-mechanics">
+    <link rel="alternate" hreflang="en" href="https://narinigmoba.github.io/en/blog/controls-calculator-mechanics">
+    <link rel="alternate" hreflang="x-default" href="https://narinigmoba.github.io/blog/controls-calculator-mechanics">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Kontrol at Sukli: Kumpletong Gabay sa Cash Drawer at Calculator">
+    <meta property="og:description"
+        content="Kabisaduhin ang mouse interactions, pag-check ng presyo sa counter, at pamamahala sa barya at perang papel sa Narinig Mo Ba?.">
+    <meta property="og:url" content="https://narinigmoba.github.io/blog/controls-calculator-mechanics">
+    <meta property="og:image" content="https://narinigmoba.github.io/images/cash-drawer-640.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Narinig Mo Ba? Controls &amp; Calculator Guide">
+    <meta name="twitter:description"
+        content="Alamin ang tamang pag-sukli at paggamit ng cash drawer sa Pinoy sari-sari store horror game.">
+    <meta name="twitter:image" content="https://narinigmoba.github.io/images/cash-drawer-640.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="90x90" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blood: '#8A1414',
+                        ink: '#0D0A0D',
+                        panel: '#161116',
+                        mute: '#8E7F87',
+                        cream: '#F4EAE0',
+                        amber: '#E0A96D',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background-color: #8A1414; color: #FFFFFF; }
+    </style>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H9E3KTYL3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4H9E3KTYL3');
+    </script>
+</head>
+
+<body class="bg-ink text-cream font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- ============ HEADER ============ -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-ink/85 border-b border-white/10">
+        <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 font-extrabold text-lg tracking-tight">
+                <img src="/images/logo.png" alt="Narinig Mo Ba? Logo" class="w-8 h-8 rounded-md object-contain">
+                <span class="text-white">Narinig Mo Ba?</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm text-cream/80">
+                <a href="/#play" class="hover:text-blood transition font-medium">Maglaro sa Browser</a>
+                <a href="/blog/" class="text-amber font-semibold">Mga Gabay</a>
+                <a href="/#about" class="hover:text-blood transition font-medium">Tungkol sa Laro</a>
+                <a href="/#community" class="hover:text-blood transition font-medium">Chismis</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="inline-flex items-center rounded-full bg-white/5 p-1 border border-white/10 text-xs font-semibold">
+                    <span class="px-2.5 py-1 rounded-full bg-red-600/30 text-white border border-red-500/40 flex items-center gap-1" aria-current="page">
+                        <span>🇵🇭</span><span>Taglish</span>
+                    </span>
+                    <a href="/en/blog/controls-calculator-mechanics" class="px-2.5 py-1 rounded-full text-cream/60 hover:text-white transition flex items-center gap-1" title="English Version">
+                        <span>🌐</span><span class="hidden sm:inline">English</span>
+                    </a>
+                </div>
+                <a href="/#play" class="text-xs text-blood font-bold px-3 py-1.5 rounded-lg bg-blood/10 border border-blood/20 hover:bg-blood/20 transition">Laruin Na ▾</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============ ARTICLE CONTENT ============ -->
+    <main class="flex-1 py-10 md:py-16">
+        <article class="max-w-3xl mx-auto px-4">
+
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-mute mb-6" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-white transition">Home</a>
+                <span>/</span>
+                <a href="/blog/" class="hover:text-white transition">Mga Gabay</a>
+                <span>/</span>
+                <span class="text-cream font-semibold truncate" aria-current="page">Kontrol at Calculator</span>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="border-b border-white/10 pb-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-500/30 text-xs font-semibold text-amber-300 mb-3">
+                    <span>🧮</span><span>Gameplay Mechanics &amp; Controls</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                    Kontrol at Sukli: Kumpletong Gabay sa Cash Drawer at Calculator
+                </h1>
+                <p class="mt-4 text-cream/80 text-base sm:text-lg leading-relaxed">
+                    Ang buhay ng tindero sa gabi ay nakasalalay sa iyong bilis mag-sukli at talas ng pakiramdam. Alamin ang bawat mouse interaction, paano i-hold ang right click para sa presyo, at paano gamitin ang cash drawer nang walang pagkakamali.
+                </p>
+                <div class="mt-5 flex flex-wrap items-center gap-4 text-xs text-mute">
+                    <span>Nakasulat: <strong>Komunidad ng Narinig Mo Ba</strong></span>
+                    <span>•</span>
+                    <span>Update: <strong>Setyembre 9, 2026</strong></span>
+                    <span>•</span>
+                    <span>Oras ng Pagbasa: <strong>4 minuto</strong></span>
+                </div>
+            </header>
+
+            <!-- Quick Answer Box -->
+            <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-panel border-l-4 border-l-amber border border-white/10 shadow-lg">
+                <span class="text-xs uppercase tracking-wider font-bold text-amber block mb-1">Mabilisang Sagot (Quick Answer)</span>
+                <p class="text-cream text-sm sm:text-base leading-relaxed">
+                    Sa <strong>Narinig Mo Ba?</strong>, ang pangunahing kontrol ay kontrolado ng mouse: <strong>Left Click</strong> para kumuha at maglagay ng paninda, <strong>Hold Right Click</strong> habang nakaturo sa item upang basahin ang presyo, at <strong>Hold Left Click</strong> para ibalik ang maling nakuha sa estante. Ang pag-sukli ay ginagawa sa pamamagitan ng pag-click sa solar calculator upang sumahin ang bawas, at pag-click sa tamang barya (₱1, ₱5, ₱10, ₱20) at perang papel (₱50 hanggang ₱1,000) sa loob ng cash drawer.
+                </p>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mt-8 rounded-2xl overflow-hidden border border-white/10 shadow-xl bg-black/50">
+                <img src="/images/cash-drawer-640.webp" alt="Cash Drawer at Calculator sa Narinig Mo Ba" class="w-full h-auto block" loading="lazy">
+                <div class="py-2.5 px-4 bg-black/70 text-center text-xs text-mute border-t border-white/5">
+                    Ang cash drawer at solar calculator: Dito kinukuha ang sukli ng mga suki.
+                </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="mt-10 space-y-8 text-cream/85 text-base sm:text-lg leading-relaxed">
+
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">1. Buod ng Lahat ng Mouse Controls</h2>
+                    <p class="mt-3">
+                        Napakasimple ngunit napaka-epektibo ng kontrol sa laro. Narito ang kumpletong talahanayan ng mga input:
+                    </p>
+                    
+                    <div class="mt-4 overflow-x-auto">
+                        <table class="w-full text-left text-sm border-collapse rounded-xl overflow-hidden bg-white/5 border border-white/10">
+                            <thead>
+                                <tr class="bg-white/10 text-white font-bold">
+                                    <th class="p-3.5 border-b border-white/10">Input / Aksyon</th>
+                                    <th class="p-3.5 border-b border-white/10">Kinalabasan</th>
+                                    <th class="p-3.5 border-b border-white/10">Saan Ginagamit</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/5 text-cream/80">
+                                <tr>
+                                    <td class="p-3.5 font-bold text-amber">Edge Panning (Galaw sa Gilid)</td>
+                                    <td class="p-3.5">Lilipat ang anggulo ng camera</td>
+                                    <td class="p-3.5">Pagitan ng estante at counter</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-bold text-amber">Single Left Click</td>
+                                    <td class="p-3.5">Kukuha o maglalapag ng item</td>
+                                    <td class="p-3.5">Sa mga nakasabit na sachets o paninda</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-bold text-amber">Hold Right Click</td>
+                                    <td class="p-3.5">Ipapalabas ang tag ng presyo (Price Check)</td>
+                                    <td class="p-3.5">Habang hawak o nakaturo sa paninda</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-bold text-amber">Hold Left Click</td>
+                                    <td class="p-3.5">Ibalik ang hawak na item sa lagayan</td>
+                                    <td class="p-3.5">Kapag nagkamali ka ng nakuha</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3.5 font-bold text-amber">Click sa Drawer / Coins</td>
+                                    <td class="p-3.5">Bubuksan at kukuha ng barya o papel</td>
+                                    <td class="p-3.5">Sa cash drawer sa ilalim ng desk</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">2. Paano Gamitin ang Price Check (Hold Right Click)</h2>
+                    <p class="mt-3">
+                        Isa sa pinakakaraniwang dahilan kung bakit nagagalit ang mamimili o bumabagal ang transaksyon ay ang maling pagsingil. 
+                    </p>
+                    <p class="mt-3">
+                        Sa totoong sari-sari store, minsan nakakalimutan ng tindera ang presyo ng bawat produkto dahil sa dami ng sari-saring sachets (kape, shampoo, instant noodles, tsitsirya). Sa <em>Narinig Mo Ba?</em>, binuo ng developer ang <strong>Right Click inspection</strong>:
+                    </p>
+                    <ul class="mt-3 list-disc list-inside space-y-2 text-sm sm:text-base text-cream/90 pl-2">
+                        <li>Ituro ang cursor sa produkto.</li>
+                        <li><strong>Pindutin at panatilihing nakapindot ang Right Click</strong> (Hold).</li>
+                        <li>May lalabas na maliit na text indicator na nagpapakita ng opisyal na presyo sa Philippine Peso (₱).</li>
+                        <li>Bitiwan ang Right Click kapag nabasa mo na.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">3. Ang Sistema ng Cash Drawer at Barya</h2>
+                    <p class="mt-3">
+                        Napakaganda ng detalye ng cash drawer sa laro. Idinisenyo ito hango sa tunay na cash box na gawa sa kahoy:
+                    </p>
+                    <div class="mt-4 grid sm:grid-cols-2 gap-4 text-sm">
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <h3 class="font-bold text-amber text-base">🪙 Barya (Coins)</h3>
+                            <p class="mt-1 text-cream/70 text-xs">Para sa maliliit na sukli tulad ng kendi o kape:</p>
+                            <div class="mt-2.5 flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱1 Piso</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱5 Lima</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱10 Sampu</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱20 Dalawampu</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <h3 class="font-bold text-amber text-base">💵 Perang Papel (Bills)</h3>
+                            <p class="mt-1 text-cream/70 text-xs">Para sa malalaking bayarin ng mga may-kaya:</p>
+                            <div class="mt-2.5 flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱50</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱100</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱500</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white/10 text-white font-bold">₱1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Helpful Tip -->
+                <blockquote class="p-5 rounded-2xl bg-white/5 border border-amber/30 text-amber text-sm sm:text-base my-6">
+                    <strong>⚡ Sikreto sa Mabilis na Pag-sukli:</strong> Laging gamitin ang solar calculator sa ibabaw ng desk bago kumuha ng pera mula sa drawer. Kapag tama ang naibigay mong sukli sa unang subok, maiiwasan mo ang pagka-inip ng mga suki sa hatinggabi.
+                </blockquote>
+
+            </div>
+
+            <!-- In-article Play CTA Card -->
+            <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-red-950/60 via-panel to-red-950/40 border border-red-500/30 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-amber font-bold">Subukan sa Laro</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-white mt-1">Sanayin ang Iyong Pag-sukli Ngayon</h3>
+                    <p class="text-cream/75 text-sm mt-1">Laruin ang laro nang libre at damhin ang tunay na tensyon ng sari-sari store.</p>
+                </div>
+                <a href="/#play" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-extrabold text-sm tracking-wide shadow-xl shadow-red-900/50 transition shrink-0">
+                    ▶ SUBUKAN SA BROWSER
+                </a>
+            </div>
+
+            <!-- Related Guides Section -->
+            <div class="mt-14 pt-8 border-t border-white/10">
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                    <span>📚</span><span>Iba Pang Mahahalagang Gabay</span>
+                </h3>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <a href="/blog/day-1-walkthrough-guide.html" class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-red-400/40 transition flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[11px] font-bold text-red-400 uppercase">Walkthrough</span>
+                            <h4 class="text-sm font-bold text-white mt-1 group-hover:text-red-400 transition">Day 1 Walkthrough</h4>
+                            <p class="text-xs text-mute mt-1 line-clamp-2">Kumpletong gabay kay Junjun at sa unang shift.</p>
+                        </div>
+                        <span class="text-xs text-red-400 font-semibold mt-3">Basahin →</span>
+                    </a>
+                    <a href="/blog/story-lore-chismis-secrets.html" class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/40 transition flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[11px] font-bold text-purple-300 uppercase">Kwento</span>
+                            <h4 class="text-sm font-bold text-white mt-1 group-hover:text-purple-300 transition">Paliwanag sa Kwento</h4>
+                            <p class="text-xs text-mute mt-1 line-clamp-2">Ang madilim na trahedya sa likod ng sari-sari store.</p>
+                        </div>
+                        <span class="text-xs text-purple-300 font-semibold mt-3">Basahin →</span>
+                    </a>
+                    <a href="/blog/download-apk-mobile-guide.html" class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-400/40 transition flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[11px] font-bold text-emerald-300 uppercase">Download</span>
+                            <h4 class="text-sm font-bold text-white mt-1 group-hover:text-emerald-300 transition">Download at APK</h4>
+                            <p class="text-xs text-mute mt-1 line-clamp-2">Katotohanan sa mobile app at PC download options.</p>
+                        </div>
+                        <span class="text-xs text-emerald-300 font-semibold mt-3">Basahin →</span>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-white/10 bg-black/60 py-10 mt-12">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-mute">
+            <div class="flex items-center gap-3">
+                <img src="/images/logo.png" alt="Logo" class="w-6 h-6 object-contain">
+                <span>© 2026 Narinig Mo Ba? Fan Wiki at Gabay. Nilikha ng komunidad para sa mga manlalaro.</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="/" class="hover:text-cream transition">Home</a>
+                <a href="/blog/" class="text-cream font-medium">Mga Gabay</a>
+                <a href="/contact" class="hover:text-cream transition">Kontak</a>
+                <a href="/privacy" class="hover:text-cream transition">Privacy</a>
+                <a href="/terms" class="hover:text-cream transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

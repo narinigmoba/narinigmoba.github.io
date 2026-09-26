@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#0d0a0d"/>
+  <!-- Dark alley with window silhouette -->
+  <rect x="60" y="40" width="680" height="420" rx="16" fill="#170f14" stroke="#ff4d4d" stroke-opacity="0.3" stroke-width="2"/>
+  <!-- Streetlamp glow -->
+  <circle cx="200" cy="120" r="90" fill="#ffb703" opacity="0.08"/>
+  <circle cx="200" cy="120" r="14" fill="#ffeeaa"/>
+  <!-- Silhouette of customer at grill window -->
+  <path d="M 450 360 C 450 300, 480 250, 520 250 C 560 250, 590 300, 590 360 Z" fill="#0c0709"/>
+  <circle cx="520" cy="220" r="28" fill="#0c0709"/>
+  <!-- Glowing red eye -->
+  <circle cx="512" cy="220" r="3" fill="#ff3333"/>
+  <circle cx="528" cy="220" r="3" fill="#ff3333"/>
+  <!-- Speech bubble -->
+  <rect x="230" y="160" width="220" height="70" rx="12" fill="#24161c" stroke="#522932"/>
+  <text x="340" y="202" text-anchor="middle" font-family="sans-serif" font-style="italic" font-size="16" fill="#ffd166">
+    "Pabili po... asin at kandila..."
+  </text>
+  <!-- Caption -->
+  <text x="400" y="430" text-anchor="middle" font-family="sans-serif" font-weight="600" font-size="18" fill="#a89fa8">
+    Late Night Customer — Listen Closely to Their Words
+  </text>
+</svg>

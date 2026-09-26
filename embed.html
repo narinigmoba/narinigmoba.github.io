@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narinig Mo Ba? — Play</title>
+    <meta name="robots" content="noindex, follow">
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            background: #0d0a0d;
+            overflow: hidden;
+        }
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        #loader {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            color: #f7f2ea;
+            background: #0d0a0d;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            z-index: 20;
+            transition: opacity 0.3s ease;
+        }
+        #loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #loader .msg {
+            font-size: 15px;
+            color: #d1c7bd;
+            text-align: center;
+            max-width: 80%;
+        }
+        .spinner {
+            width: 42px;
+            height: 42px;
+            border: 4px solid rgba(230, 57, 70, 0.25);
+            border-top-color: #e63946;
+            border-radius: 50%;
+            animation: spin 0.9s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        #game-frame {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="loader">
+            <div class="spinner" aria-hidden="true"></div>
+            <div class="msg">Entering the Sari-Sari store… "Narinig mo ba?"</div>
+        </div>
+        <iframe id="game-frame"
+                src="/game/narinig-mo-ba/"
+                title="Narinig Mo Ba? — Game"
+                allow="autoplay; fullscreen; gamepad"></iframe>
+    </div>
+
+    <script>
+        window.addEventListener("load", () => {
+            const frame = document.getElementById("game-frame");
+            const loader = document.getElementById("loader");
+
+            frame.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.classList.add("hidden");
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

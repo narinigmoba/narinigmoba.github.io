@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Narinig Mo Ba?</title>
+    <meta name="description" content="Get in touch with the Narinig Mo Ba? team. Send feedback, bug reports, fan art, or copyright inquiries.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://narinigmoba.github.io/contact">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="theme-color" content="#0d0a0d">
+
+    <!-- Google Consent Mode v2 -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'granted',
+            'functionality_storage': 'granted',
+            'security_storage': 'granted',
+            'wait_for_update': 500
+        });
+    </script>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43EZV53Q7P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-43EZV53Q7P');
+    </script>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us — Narinig Mo Ba?">
+    <meta name="twitter:description" content="Get in touch with the Narinig Mo Ba? team.">
+    <meta name="twitter:image" content="https://narinigmoba.github.io/images/og-card.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0d0a0d',
+                        cream: '#f7f2ea',
+                        mute: '#9e929b',
+                        blood: '#e63946',
+                        amber: '#ffb703'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-ink text-cream font-sans antialiased">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-ink/85 border-b border-white/10">
+        <nav class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 font-bold text-lg text-cream">
+                <img src="/images/logo.png" alt="Narinig Mo Ba? Logo" class="w-8 h-8 rounded-md object-contain">
+                <span>Narinig Mo Ba?</span>
+            </a>
+            <div class="flex items-center gap-5 text-sm text-cream/80">
+                <a href="/" class="hover:text-blood transition">Home (🇵🇭)</a>
+                <a href="/blog/" class="text-amber font-semibold">Mga Gabay</a>
+                <a href="/en/" class="hover:text-blood transition">English (🌐)</a>
+                <a href="/privacy" class="hover:text-blood transition">Privacy</a>
+                <a href="/terms" class="hover:text-blood transition">Terms</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-xl mx-auto px-4 py-12 md:py-16">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Contact the Community</h1>
+            <p class="mt-3 text-mute text-sm leading-relaxed">
+                Have a question about the game lore, spotted a bug, or want to share feedback? Send a message through the form below.
+            </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+            <form id="contact-form" class="space-y-5">
+                <div>
+                    <label for="contact-name" class="block text-xs font-semibold uppercase tracking-wider text-mute mb-2">Your Name</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="e.g. SariSariSurfer"
+                           class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-cream placeholder:text-mute/50 focus:outline-none focus:border-blood transition">
+                </div>
+
+                <div>
+                    <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-mute mb-2">Your Email</label>
+                    <input type="email" id="contact-email" name="email" required placeholder="your.email@example.com"
+                           class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-cream placeholder:text-mute/50 focus:outline-none focus:border-blood transition">
+                </div>
+
+                <div>
+                    <label for="contact-topic" class="block text-xs font-semibold uppercase tracking-wider text-mute mb-2">Subject</label>
+                    <select id="contact-topic" name="topic"
+                            class="w-full px-4 py-3 rounded-xl bg-[#1a1217] border border-white/15 text-cream focus:outline-none focus:border-blood transition">
+                        <option value="feedback">Game Feedback &amp; Suggestions</option>
+                        <option value="bug">Technical Issue or Bug Report</option>
+                        <option value="lore">Lore Theory &amp; Secrets</option>
+                        <option value="dmca">Copyright / IP Inquiry</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="contact-msg" class="block text-xs font-semibold uppercase tracking-wider text-mute mb-2">Message</label>
+                    <textarea id="contact-msg" name="message" rows="4" required placeholder="What would you like to tell us?"
+                              class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-cream placeholder:text-mute/50 focus:outline-none focus:border-blood transition"></textarea>
+                </div>
+
+                <!-- Honeypot anti-spam (invisible to humans) -->
+                <input type="text" name="website" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
+
+                <button type="submit" id="submit-btn"
+                        class="w-full py-3.5 px-6 rounded-xl bg-blood text-white font-bold hover:bg-[#ff4d5a] transition shadow-lg shadow-blood/30">
+                    Send Message
+                </button>
+            </form>
+            <div id="success-msg" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm text-center">
+                ✓ Thank you! Your message has been sent to our team.
+            </div>
+            <div id="error-msg" class="hidden mt-4 p-4 rounded-xl bg-red-500/20 border border-red-500/30 text-red-300 text-sm text-center">
+                ✗ Could not send message. Please try again later.
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-xs text-mute">
+        <p>&copy; 2026 Narinig Mo Ba? Fan Page & Community. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Google Apps Script Web App Endpoint for Contact Form
+        const APPS_SCRIPT_ENDPOINT = window.NMB_CONTACT_ENDPOINT || 'https://script.google.com/macros/s/AKfycbyGp43jMVqCGkeC_M76USR3TJqJ_IxHV8o5c-4eciUtlTi1AuFnSbraCbNiMSUHyXmGFQ/exec';
+
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const btn = document.getElementById('submit-btn');
+            const successEl = document.getElementById('success-msg');
+            const errorEl = document.getElementById('error-msg');
+
+            const name = (form.name.value || '').trim();
+            const email = (form.email.value || '').trim();
+            const topic = form.topic.value;
+            const message = (form.message.value || '').trim();
+            const website = form.website.value; // honeypot
+
+            successEl.classList.add('hidden');
+            errorEl.classList.add('hidden');
+
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+
+            const payload = {
+                type: 'contact',
+                name: name,
+                email: email,
+                topic: topic,
+                message: message,
+                domain: 'narinigmoba.github.io',
+                website: website
+            };
+
+            if (APPS_SCRIPT_ENDPOINT) {
+                try {
+                    const res = await fetch(APPS_SCRIPT_ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                        body: JSON.stringify(payload)
+                    });
+                    const data = await res.json();
+                    if (data && data.ok) {
+                        form.reset();
+                        successEl.classList.remove('hidden');
+                    } else {
+                        errorEl.textContent = '✗ ' + (data.error || 'Failed to send message.');
+                        errorEl.classList.remove('hidden');
+                    }
+                } catch (err) {
+                    console.warn('Contact submission error:', err);
+                    errorEl.textContent = '✗ Network error. Please check your connection.';
+                    errorEl.classList.remove('hidden');
+                } finally {
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                }
+            } else {
+                // Endpoint not yet set — fallback to graceful client confirmation
+                setTimeout(() => {
+                    form.reset();
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                    successEl.classList.remove('hidden');
+                }, 500);
+            }
+        });
+    </script>
+    <script src="/js/consent.js"></script>
+</body>
+</html>

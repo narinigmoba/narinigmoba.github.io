@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#120c10"/>
+  <!-- Sari sari interior -->
+  <rect x="50" y="50" width="700" height="400" rx="12" fill="#1b1216" stroke="#4a2228" stroke-width="2"/>
+  <!-- Shelves -->
+  <rect x="80" y="100" width="640" height="15" fill="#361f24"/>
+  <rect x="80" y="220" width="640" height="15" fill="#361f24"/>
+  <rect x="80" y="340" width="640" height="15" fill="#361f24"/>
+  <!-- Hanging chips in plastic packs -->
+  <g fill="#e63946" opacity="0.8">
+    <rect x="110" y="125" width="45" height="65" rx="4"/>
+    <rect x="175" y="125" width="45" height="65" rx="4" fill="#f4a261"/>
+    <rect x="240" y="125" width="45" height="65" rx="4" fill="#e76f51"/>
+    <rect x="305" y="125" width="45" height="65" rx="4" fill="#2a9d8f"/>
+  </g>
+  <!-- Radio and counter -->
+  <rect x="420" y="255" width="130" height="75" rx="8" fill="#24171c" stroke="#5c2e36" stroke-width="2"/>
+  <circle cx="455" cy="292" r="16" fill="#140d10"/>
+  <circle cx="510" cy="292" r="16" fill="#140d10"/>
+  <!-- Text overlay -->
+  <text x="400" y="420" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="22" fill="#ffd166">
+    The Neighborhood Sari-Sari Store at 11:42 PM
+  </text>
+</svg>

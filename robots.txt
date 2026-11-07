@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /embed
+Disallow: /game/
+
+Sitemap: https://narinigmoba.github.io/sitemap.xml
